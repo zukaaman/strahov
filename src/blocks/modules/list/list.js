@@ -1,13 +1,9 @@
-modules.define('list', ['i-bem-dom'], function(provide, bemDom) {
+var listListButton = document.querySelector(".list__list-button");
+var popup = document.querySelector(".popup");
+var popupOverlay = document.querySelector(".popup-overlay");
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
+listListButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.add("popup--active");
+  popupOverlay.classList.add("popup-overlay--active");
 });

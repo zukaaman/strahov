@@ -1,23 +1,24 @@
 .course {
   position: relative;
 
-  padding-top: 75px;
+  padding-top: 56px;
   padding-bottom: 90px;
 
   &::before {
     content: "и/или";
     position: absolute;
     top: 193px;
-    left: 50%;
+    left: 0;
     z-index: -10;
 
-    margin-left: -469px;
-    width: 938px;
+    // margin-left: -469px;
+    width: 100%;
 
     color: #ebedf7;
     font-size: 340px;
     font-weight: 900;
     line-height: 340px;
+    text-align: center;
   }
 
   .container {
@@ -61,15 +62,24 @@
   }
 
   .course__button {
-      padding: 20px 59px;
-      margin-top: -34px;
+    padding: 20px 59px;
+    margin-top: -34px;
 
-      color: #ffffff;
-      font-size: 17px;
-      font-weight: 500;
-      text-transform: uppercase;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
 
-      border-radius: 30px;
-      background-color: #273061;
+    border-radius: 30px;
+    background-color: #273061;
+
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 0 0 0 2px white,
+                  0 0 0 4px #273061;
+
+      transition: 0.3s;
     }
+  }
 }

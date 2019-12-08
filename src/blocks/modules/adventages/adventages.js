@@ -1,13 +1,9 @@
-modules.define('adventages', ['i-bem-dom'], function(provide, bemDom) {
+var adventagesButton = document.querySelector(".adventages__button");
+var popup = document.querySelector(".popup");
+var popupOverlay = document.querySelector(".popup-overlay");
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
+adventagesButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  popup.classList.add("popup--active");
+  popupOverlay.classList.add("popup-overlay--active");
 });

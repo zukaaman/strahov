@@ -4,9 +4,19 @@
 
   background-color: #171e45;
 
+  @include m-768 {
+    padding-top: 78px;
+    padding-bottom: 80px;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
+
+    @include m-768 {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .footer__socials {
@@ -104,6 +114,11 @@
   .footer__info {
     text-align: right;
 
+    @include m-768 {
+      margin-top: 55px;
+      text-align: center;
+    }
+
     .footer__logo-wrapper {
       width: 198px;
       height: 46px;
@@ -112,13 +127,17 @@
 
       overflow: hidden;
 
+      @include m-768 {
+        margin-right: auto;
+      }
+
       .footer__logo {
         object-fit: contain;
       }
     }
 
     .footer__text {
-      margin-bottom: 5px;
+      margin-top: 5px;
 
       color: #ffffff;
       font-size: 15px;
@@ -126,7 +145,7 @@
       line-height: normal;
       text-decoration: none;
 
-      &:last-child {
+      &:first-child {
         margin-bottom: 0;
       }
     }

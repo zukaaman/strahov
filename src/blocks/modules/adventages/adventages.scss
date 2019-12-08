@@ -146,12 +146,20 @@
     padding: 20px 61px;
 
     color: #ffffff;
-    font-family: "Gotham Pro";
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
 
     border-radius: 30px;
     background-color: #273061;
+
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 0 0 0 2px white,
+                  0 0 0 4px #273061;
+
+      transition: 0.3s;
+    }
   }
 }

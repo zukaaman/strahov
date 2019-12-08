@@ -1,0 +1,134 @@
+.footer {
+  padding-top: 57px;
+  padding-bottom: 41px;
+
+  background-color: #171e45;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__socials {
+
+    .footer__socials-item {
+      margin-bottom: 27px;
+
+      &:nth-of-type(1) {
+
+        .footer__socials-link::before {
+          top: calc((100% - 24px) / 2);
+
+          height: 24px;
+
+          background-image: url("../img/svg/phone.svg");
+        }
+      }
+
+      &:nth-of-type(2) {
+
+        .footer__socials-link::before {
+        top: calc((100% - 18px) / 2);
+
+        height: 18px;
+
+        background-image: url("../img/svg/email.svg");
+      }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .footer__socials-link {
+      position: relative;
+
+      padding-left: 60px;
+
+      color: #ffffff;
+      font-size: 25px;
+      font-weight: 400;
+      text-decoration: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+
+        width: 26px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+
+    .footer__socials-vk,
+    .footer__socials-insta {
+      position: relative;
+
+      width: 28px;
+      height: 28px;
+      display: inline-block;
+      margin-right: 29px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 28px;
+        height: 28px;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .footer__socials-vk::before {
+      background-image: url("../img/svg/vk.svg");
+    }
+
+    .footer__socials-insta::before {
+      background-image: url("../img/svg/insta.svg");
+    }
+  }
+
+  .footer__info {
+    text-align: right;
+
+    .footer__logo-wrapper {
+      width: 198px;
+      height: 46px;
+      margin-bottom: 68px;
+      margin-left: auto;
+
+      overflow: hidden;
+
+      .footer__logo {
+        object-fit: contain;
+      }
+    }
+
+    .footer__text {
+      margin-bottom: 5px;
+
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

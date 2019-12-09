@@ -6,6 +6,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #273061;
+
+  @include m-768 {
+    padding-top: 27px;
+    padding-bottom: 93px;
+
+    background-position-y: -130px;
+  }
 
   .top__logo-wrapper {
     width: 198px;
@@ -23,6 +31,12 @@
     display: flex;
     justify-content: space-between;
     margin-top: 23px;
+
+    @include m-768 {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 130px;
+    }
   }
 
   .top__title {
@@ -32,6 +46,10 @@
     font-size: 40px;
     font-weight: 700;
     line-height: normal;
+
+    @include m-768 {
+      margin-top: 0;
+    }
   }
 
   .top__top-text {
@@ -45,6 +63,10 @@
     span {
       font-weight: 700;
     }
+
+    @include m-768 {
+      margin-top: 43px;
+    }
   }
 
   .top__img-wrapper {
@@ -52,6 +74,12 @@
     height: 472px;
 
     overflow: hidden;
+
+    @include m-768 {
+      width: 309px;
+      height: 390px;
+      margin-top: 42px;
+    }
 
     .top__img {
       object-fit: contain;
@@ -62,6 +90,12 @@
     display: flex;
     align-items: flex-start;
     margin-top: 64px;
+
+    @include m-768 {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
   }
 
   .top__button {
@@ -84,6 +118,10 @@
 
       transition: 0.3s;
     }
+
+    @include m-768 {
+      padding: 19px 49px;
+    }
   }
 
   .top__bottom-text {
@@ -96,6 +134,11 @@
 
     span {
       font-weight: 700;
+    }
+
+    @include m-768 {
+      margin-top: 29px;
+      margin-left: 0;
     }
   }
 }

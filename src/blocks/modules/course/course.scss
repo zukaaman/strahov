@@ -4,6 +4,12 @@
   padding-top: 56px;
   padding-bottom: 90px;
 
+  overflow: hidden;
+
+  @include m-768 {
+    padding-top: 0;
+  }
+
   &::before {
     content: "и/или";
     position: absolute;
@@ -19,6 +25,17 @@
     font-weight: 900;
     line-height: 340px;
     text-align: center;
+
+    @include m-768 {
+      width: auto;
+      right: 15px;
+
+      line-height: 120px;
+      font-size: 172px;
+
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+    }
   }
 
   .container {
@@ -32,6 +49,7 @@
     font-size: 35px;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
 
     span {
       color: #000000;
@@ -43,13 +61,32 @@
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding-left: 115px;
-    justify-content: flex-start;
+    // padding-left: 115px;
+    justify-content: space-between;
+    width: 835px;
+
+    @include m-900 {
+      width: 100%;
+    }
+
+    @include m-768 {
+      margin-top: 79px;
+      flex-direction: column;
+    }
 
     .course__list-item {
-      flex-basis: 50%;
+      flex-basis: 43%;
       margin-bottom: 125px;
 
+      @include m-768 {
+        margin-bottom: 86px;
+        flex-basis: 0;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .course__list-text {
       color: #000000;
       font-size: 25px;
       font-weight: 400;
@@ -57,6 +94,16 @@
 
       span {
         font-weight: 700;
+      }
+
+      @include m-768 {
+        width: 84%;
+        padding-left: 25%;
+      }
+
+      @include m-600 {
+        width: 100%;
+        padding-left: 0;
       }
     }
   }

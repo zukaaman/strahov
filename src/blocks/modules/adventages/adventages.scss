@@ -4,6 +4,13 @@
 
   background-color: #ebedf7;
 
+  overflow: hidden;
+
+  @include m-768 {
+    padding-top: 65px;
+    padding-bottom: 92px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -15,6 +22,7 @@
     font-size: 35px;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
 
     span {
       color: #273061;
@@ -27,12 +35,26 @@
     flex-wrap: wrap;
     align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
+    width: 1050px;
+
+    @include m-1200 {
+      width: 100%;
+    }
+
+    @include m-768 {
+      margin-top: 80px;
+    }
 
     .adventages__list-item {
-      flex-basis: 50%;
+      flex-basis: 45%;
       margin-bottom: 81px;
-      padding-left: 235px;
+      padding-left: 142px;
+
+      @include m-768 {
+        flex-basis: 100%;
+        margin-bottom: 80px;
+      }
 
       &:nth-of-type(1) {
 
@@ -44,6 +66,10 @@
           height: 101px;
 
           background-image: url("../img/svg/1.svg");
+
+          @include m-1200 {
+            top: -1px;
+          }
         }
       }
 
@@ -57,6 +83,10 @@
           height: 98px;
 
           background-image: url("../img/svg/2.svg");
+
+          @include m-1200 {
+            top: -11px;
+          }
         }
       }
 
@@ -70,6 +100,10 @@
           height: 81px;
 
           background-image: url("../img/svg/3.svg");
+
+          @include m-1200 {
+            top: -14px;
+          }
         }
       }
 
@@ -83,6 +117,10 @@
           height: 92px;
 
           background-image: url("../img/svg/4.svg");
+
+          @include m-1200 {
+            top: -19px;
+          }
         }
       }
 
@@ -96,6 +134,10 @@
           height: 105px;
 
           background-image: url("../img/svg/5.svg");
+
+          @include m-1200 {
+            top: -23px;
+          }
         }
       }
 
@@ -109,6 +151,10 @@
           height: 103px;
 
           background-image: url("../img/svg/6.svg");
+
+          @include m-1200 {
+            top: -19px;
+          }
         }
       }
     }
@@ -120,6 +166,10 @@
       font-size: 30px;
       font-weight: 700;
       line-height: normal;
+
+      @include m-1200 {
+        height: 99px;
+      }
 
       &::before {
         content: "";
@@ -138,6 +188,11 @@
       font-size: 25px;
       font-weight: 400;
       line-height: normal;
+
+      @include m-1200 {
+        margin-top: 43px;
+        margin-left: -142px;
+      }
     }
   }
 
@@ -160,6 +215,10 @@
                   0 0 0 4px #273061;
 
       transition: 0.3s;
+    }
+
+    @include m-768 {
+      margin-top: 14px;
     }
   }
 }

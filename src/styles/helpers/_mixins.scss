@@ -9,3 +9,7 @@
 @mixin m-768 {
   @media (max-width: 767px) { @content; }
 }
+
+@mixin m-600 {
+  @media (max-width: 599px) { @content; }
+}

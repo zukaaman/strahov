@@ -2,6 +2,13 @@
   padding-top: 90px;
   padding-bottom: 78px;
 
+  overflow: hidden;
+
+  @include m-768 {
+    padding-top: 85px;
+    padding-bottom: 80px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -13,6 +20,7 @@
     font-size: 35px;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
 
     span {
       color: #273061;
@@ -24,20 +32,66 @@
     display: flex;
     align-self: flex-start;
     margin-bottom: 82px;
+    justify-content: space-between;
+
+    @include m-900 {
+      flex-direction: column;
+    }
+
+    @include m-768 {
+      margin-bottom: 103px;
+      margin-top: 23px;
+    }
   }
 
   .about__text-wrapper {
     width: 540px;
+
+    @include m-1200 {
+      flex-basis: 45%;
+      width: auto;
+    }
+
+    @include m-900 {
+      flex-basis: 100%;
+      width: calc(100% + 60px);
+      margin-left: -30px;
+    }
+
+    @include m-768 {
+      width: calc(100% + 30px);
+      margin-left: -15px;
+    }
   }
 
   .about__top-text-wrapper {
     padding: 31px 42px 31px 36px;
+
+    @include m-900 {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+
+    @include m-768 {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
   }
 
   .about__bottom-text-wrapper {
     padding: 31px 42px 31px 36px;
 
     background-color: #ebedf7;
+
+    @include m-900 {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+
+    @include m-768 {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
   }
 
   .about__text {
@@ -58,6 +112,19 @@
 
     overflow: hidden;
 
+    @include m-1200 {
+      flex-basis: 45%;
+    }
+
+    @include m-900 {
+      flex-basis: 100%;
+      margin-top: 45px;
+      width: 345px;
+      height: 299px;
+      align-self: center;
+      margin-left: 0;
+    }
+
     .about__img {
       object-fit: contain;
     }
@@ -77,6 +144,11 @@
     background-color: #273061;
 
     transition: 0.3s;
+
+    @include m-768 {
+      margin-top: 44px;
+      padding: 19px 49px;
+    }
 
     &:hover {
       box-shadow: 0 0 0 2px white,

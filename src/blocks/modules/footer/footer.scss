@@ -75,7 +75,8 @@
     }
 
     .footer__socials-vk,
-    .footer__socials-insta {
+    .footer__socials-insta,
+    .footer__socials-fb {
       position: relative;
 
       width: 28px;
@@ -108,6 +109,10 @@
 
     .footer__socials-insta::before {
       background-image: url("../img/svg/insta.svg");
+    }
+
+    .footer__socials-fb::before {
+      background-image: url("../img/svg/fb.svg");
     }
   }
 
